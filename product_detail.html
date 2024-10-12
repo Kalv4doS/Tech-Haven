@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products01 - Tech Haven</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" width="100px" alt="logo">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Account</a></li>
+                </ul>
+            </nav>
+            <img src="images/cart.png" width="30px" height="30px" >
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+</div>
+
+<!------------------ product details -------------------------------->
+    <div class="single-product">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/product1-1.jpg" width="100%">
+            </div>
+            <div class="col-2">
+                <p>Home / Lenovoideapad111</p>
+                <h1>Lenovoideapad111</h1>
+                <h4>$15000.00</h4>
+                <input type="number" value="1">
+                <a href="" class="btn">ใส่ตระกร้า</a>
+
+                <p>รายละเอียดสินค้า:</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel enim vel justo faucibus condimentum. Nulla facilisi. Nullam in velit vel neque efficitur eleifend. Sed tincidunt, purus vel consectetur posuere, nunc nisi faucibus neque, sed placerat diam velit nec arcu. Integer id turpis vel enim sodales gravida.</p>
+            </div>
+        </div>
+    </div>
+
+<!-------------------------------------------------->
+        <h2 class="title">สินค้าแนะนำ</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="images/product1-1.jpg" alt="">
+                <h4>Lenovo iDeaPad 01</h4>
+                <p>$15000.00</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product1-1.jpg" alt="">
+                <h4>Lenovo iDeaPad 01</h4>
+                <p>$15000.00</p>
+            </div>
+            <div class="col-4">
+                <img src="images/product1-1.jpg" alt="">
+                <h4>Lenovo iDeaPad 01</h4>
+                <p>$15000.00</p>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+<!------------------ footer ------>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-2">
+                    <img src="images/logo2.png" alt="">
+                    <p>แหล่งรวมแล็ปท็อปและอุปกรณ์ IT ที่คุณไว้ใจได้ เพื่อการใช้งานที่ล้ำสมัยในทุกวัน</p>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2024</p>
+        </div>
+    </div>
+<!------------------ js for toggle menu -------------------------------->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight ="0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+                {
+                    MenuItems.style.maxHeight= "200px"
+                }
+            else
+                {
+                    MenuItems.style.maxHeight= "0px"
+                }
+        }
+    </script>
+</body>
+</html>
