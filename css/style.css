@@ -190,12 +190,6 @@ p{
 
 
 
-
-
-
-
-
-
 /*------------------ footer ------*/
 .footer{
     background: #000;
@@ -302,6 +296,12 @@ input:focus{
 .cart-page{
     margin: 80px auto;
 }
+
+.cartbtn{
+    float: right;
+}
+
+
 table{
     width: 100%;
     border-collapse: collapse;
@@ -348,6 +348,25 @@ td:last-child{
 th:last-child{
     text-align: right;
 }
+
+/*-------- success page ------*/
+
+.success img{
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top :50px;
+    
+}
+
+.success h1{
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom :50px;
+}
+
 
 /*-------- account page ------*/
 .account-page{
