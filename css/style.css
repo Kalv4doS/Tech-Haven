@@ -143,7 +143,7 @@ p{
 }
 
 .aboutus h1{
-    color: #000000;
+    color: #48CFCB;
     text-align: center;
      font-size: 36px;
 }
@@ -156,9 +156,17 @@ p{
     padding-right: 30px;
     padding-bottom: 30px;
 }
+.aboutus h4{
+    color: #000;
+    text-align: left;
+    font-size: 20px;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
 
 .contact h1{
-    color: #000000;
+    color: #48CFCB;
     text-align: center;
      font-size: 36px;
      padding-bottom: 50px;
