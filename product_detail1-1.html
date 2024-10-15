@@ -25,13 +25,12 @@
                     <li><a href="account.html">บัญชี</a></li>
                 </ul>
             </nav>
-            <a href="cart.html"><img src="images/cart.png" width="30px" height="30px" ></a>
+            <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
             <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
         </div>
     </div>
-</div>
 
-<!------------------ product details -------------------------------->
+    <!------------------ product details -------------------------------->
     <div class="single-product">
         <div class="row">
             <div class="col-2">
@@ -41,13 +40,13 @@
                 <p>Home / Laptop/ Acer Nitro V 15 ANV15-51-574G</p>
                 <h1>Acer Nitro V 15 ANV15-51-574G</h1>
                 <h4>฿27,990.00</h4>
-                <input type="number" value="1">
-                <a href="cart.html" class="btn">ใส่ตระกร้า</a>
+                <input type="number" id="quantity" value="1" min="1">
+                <button class="btn" id="addToCartButton">ใส่ตะกร้า</button>
 
                 <p>รายละเอียดสินค้า:</p>
                 <p> CPU: Intel Core i5-13420H <br>
                     GPU: NVIDIA GeForce RTX 4050 <br>
-                    RAM:16 GB DDR5 4800 MHz<br>
+                    RAM: 16 GB DDR5 4800 MHz<br>
                     DISPLAY: 15.6 inch (1920x1080) Full HD<br>
                     STORAGE: 512 GB SSD PCIe M.2 Gen 4<br>
                     OS: Windows 11 Home<br>
@@ -57,29 +56,27 @@
         </div>
     </div>
 
-<!-------------------------------------------------->
-        <h2 class="title">สินค้าแนะนำ</h2>
-        <div class="row">
-            <div class="col-4">
-                <a href="product_detail3-1.html"><img src="images/product3-1.jpg" alt=""></a>
-                <h4>หูฟัง HyperX Cloud III Gaming Headset</h4>
-                <p>฿3,090.00</p>
-            </div>
-            <div class="col-4">
-                <a href="product_detail2-1.html"><img src="images/product2-1.jpg" alt=""></a>
-                <h4>คีย์บอร์ด EGA TYPE CMK1 Mechanical Gaming Keyboard (EN/TH)</h4>
-                <p>฿890.00</p>
-            </div>
-            <div class="col-4">
-                <a href="product_detail2-5.html"><img src="images/product2-5.jpg" alt=""></a>
-                <h4>เมาส์ Razer DeathAdder Essential Gaming Mouse Black</h4>
-                <p>฿799.00</p>
-            </div>
-            </div>
-            </div>
+    <!-------------------------------------------------->
+    <h2 class="title">สินค้าแนะนำ</h2>
+    <div class="row">
+        <div class="col-4">
+            <a href="product_detail3-1.html"><img src="images/product3-1.jpg" alt=""></a>
+            <h4>หูฟัง HyperX Cloud III Gaming Headset</h4>
+            <p>฿3,090.00</p>
+        </div>
+        <div class="col-4">
+            <a href="product_detail2-1.html"><img src="images/product2-1.jpg" alt=""></a>
+            <h4>คีย์บอร์ด EGA TYPE CMK1 Mechanical Gaming Keyboard (EN/TH)</h4>
+            <p>฿890.00</p>
+        </div>
+        <div class="col-4">
+            <a href="product_detail2-5.html"><img src="images/product2-5.jpg" alt=""></a>
+            <h4>เมาส์ Razer DeathAdder Essential Gaming Mouse Black</h4>
+            <p>฿799.00</p>
         </div>
     </div>
-<!------------------ footer ------>
+
+    <!------------------ footer ------>
 
     <div class="footer">
         <div class="container">
@@ -93,22 +90,40 @@
             <p class="copyright">Copyright 2024</p>
         </div>
     </div>
-<!------------------ js for toggle menu -------------------------------->
+
+    <!------------------ js for toggle menu -------------------------------->
     <script>
-        var MenuItems = document.getElementById("MenuItems");
+        document.getElementById('addToCartButton').addEventListener('click', function() {
+            const productName = "Acer Nitro V 15 ANV15-51-574G"; // ชื่อสินค้า
+            const productPrice = 27990; // ราคาสินค้า
+            const productImage = "images/product1-1.jpg"; // รูปภาพสินค้า
+            const quantity = document.getElementById('quantity').value; // จำนวนสินค้า
 
-        MenuItems.style.maxHeight ="0px";
+            // รับข้อมูลสินค้าที่มีอยู่ในตะกร้าจาก localStorage
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 
-        function menutoggle(){
-            if(MenuItems.style.maxHeight == "0px")
-                {
-                    MenuItems.style.maxHeight= "200px"
-                }
-            else
-                {
-                    MenuItems.style.maxHeight= "0px"
-                }
-        }
+            // ตรวจสอบว่าสินค้านั้นมีอยู่ในตะกร้าแล้วหรือยัง
+            const existingItemIndex = cartItems.findIndex(item => item.name === productName);
+
+            if (existingItemIndex > -1) {
+                // หากมีสินค้าอยู่แล้ว อัปเดตจำนวนสินค้า
+                cartItems[existingItemIndex].quantity += parseInt(quantity);
+            } else {
+                // หากไม่มี ให้เพิ่มสินค้าใหม่ พร้อมรูปภาพ
+                cartItems.push({
+                    name: productName,
+                    price: productPrice,
+                    image: productImage,  // เพิ่มรูปภาพสินค้า
+                    quantity: parseInt(quantity)
+                });
+            }
+
+            // อัปเดตข้อมูลลงใน localStorage
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+
+            alert(`${quantity} x ${productName} ได้ถูกเพิ่มลงในตะกร้าเรียบร้อยแล้ว`);
+        });
     </script>
+    
 </body>
 </html>
