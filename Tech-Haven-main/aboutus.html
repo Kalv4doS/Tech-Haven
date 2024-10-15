@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกี่ยวกับเรา - Tech Haven</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" width="100px" alt="logo"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">หน้าแรก</a></li>
+                    <li><a href="product.html">สินค้า</a></li>
+                    <li><a href="aboutus.html">เกี่ยวกับเรา</a></li>
+                    <li><a href="Contact.html">ติดต่อเรา</a></li>
+                    <li><a href="account.html">บัญชี</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/cart.png" width="30px" height="30px" ></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+</div>
+
+<!------------------ abou us -------------------------------->
+
+    <div class="aboutus">
+        <h1>เกี่ยวกับเรา</h1>
+        <p>ยินดีต้อนรับสู่ Tech Haven แหล่งรวมผลิตภัณฑ์เทคโนโลยีชั้นนำที่ตอบโจทย์ทุกความต้องการของคนรัก IT! เราเชี่ยวชาญในการจำหน่ายแล็ปท็อปและอุปกรณ์ IT หลากหลายรุ่น ที่ออกแบบมาเพื่อรองรับการใช้งานที่หลากหลาย ตั้งแต่นักเรียน นักศึกษา ไปจนถึงมืออาชีพในสายงานต่างๆ ไม่ว่าจะเป็นการทำงานประจำวัน การสร้างสรรค์งานครีเอทีฟ หรือการเล่นเกมที่ต้องการประสิทธิภาพสูงสุด
+        <br>
+        ที่ Tech Haven เรามุ่งมั่นที่จะมอบผลิตภัณฑ์ที่มีคุณภาพและบริการที่ดีที่สุดให้กับลูกค้าของเรา เรารวบรวมแล็ปท็อปจากแบรนด์ชั้นนำทั่วโลก พร้อมอุปกรณ์เสริมไอทีที่ตอบสนองการใช้งานในทุกด้าน ไม่ว่าจะเป็นอุปกรณ์เชื่อมต่อ เครือข่าย อุปกรณ์เกมมิ่ง ไปจนถึงอุปกรณ์จัดเก็บข้อมูล เพื่อให้คุณได้สัมผัสประสบการณ์การใช้งานที่ไม่มีสะดุด
+        <br>    
+        เพราะที่ Tech Haven เราเชื่อว่าเทคโนโลยีไม่ควรเป็นแค่เครื่องมือ แต่ควรเป็นแรงบันดาลใจและพลังที่จะช่วยให้คุณบรรลุเป้าหมายในทุกๆ วัน
+        <br>   
+        Tech Haven - ก้าวสู่อนาคตด้วยเทคโนโลยีที่คุณไว้วางใจ
+        </p>
+
+        <h4>
+            เว็บไซต์นี้จัดทำโดย
+        </h4>
+
+
+        <p>
+            6706022610055  นายก้องภพ บำรุงแจ้ง <br>
+            6706022610403  นายณภัทร บุษดี      <br>
+            6706022610519  นางสาวพนิดา โพธิ์ศรี    <br>
+            นักศึกษาชั้นปีที่1 สาขาวิชาวิศวกรรมสารสนเทศและเครือข่าย ภาควิชาเทคโนโลยีสารสนเทศ <br>
+            คณะเทคโนโลยีและการจัดการอุตสาหกรรม มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ วิทยาเขตปราจีนบุรี
+        </p>
+    </div>
+
+
+
+
+
+
+<!------------------ footer ------>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-2">
+                    <img src="images/logo2.png" alt="">
+                    <p>แหล่งรวมแล็ปท็อปและอุปกรณ์ IT ที่คุณไว้ใจได้ เพื่อการใช้งานที่ล้ำสมัยในทุกวัน</p>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2024</p>
+        </div>
+    </div>
+
+    <!------------------ js for toggle menu -------------------------------->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight ="0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+                {
+                    MenuItems.style.maxHeight= "200px"
+                }
+            else
+                {
+                    MenuItems.style.maxHeight= "0px"
+                }
+        }
+    </script>
+</body>
+</html>
