@@ -73,7 +73,7 @@ function updateCart() {
                     <img src="${item.image}" alt="${item.name}"> <!-- Display product image -->
                     <div>
                         <p>${item.name}</p>
-                        <small>ราคา: THB${item.price.toFixed(2)}</small>
+                        <small>ราคา: ${item.price.toFixed(2)} THB</small>
                     </div>
                 </div>
             </td>
