@@ -73,14 +73,14 @@ function updateCart() {
                     <img src="${item.image}" alt="${item.name}"> <!-- Display product image -->
                     <div>
                         <p>${item.name}</p>
-                        <small>ราคา: ฿${item.price.toFixed(2)}</small>
+                        <small>ราคา: THB${item.price.toFixed(2)}</small>
                     </div>
                 </div>
             </td>
             <td>
                 <input type="number" value="${item.quantity}" class="quantity" onchange="updateTotal()">
             </td>
-            <td>฿${itemTotal.toFixed(2)}</td>
+            <td>THB${itemTotal.toFixed(2)}</td>
             <td><a href="#" onclick="removeItem(this)">Remove</a></td>
         `;
         cartTable.appendChild(row);
@@ -90,7 +90,7 @@ function updateCart() {
     const tax = total * 0.07; // 7% tax rate
     const grandTotal = total + tax;
 
-    totalPriceElement.innerText = `฿${total.toFixed(2)}`;
-    taxElement.innerText = `฿${tax.toFixed(2)}`;
-    grandTotalElement.innerText = `฿${grandTotal.toFixed(2)}`;
+    totalPriceElement.innerText = `THB${total.toFixed(2)}`;
+    taxElement.innerText = `THB${tax.toFixed(2)}`;
+    grandTotalElement.innerText = `THB${grandTotal.toFixed(2)}`;
 }
