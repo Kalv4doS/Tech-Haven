@@ -130,14 +130,14 @@
                             <img src="${item.image}" alt="${item.name}"> <!-- แสดงรูปสินค้า -->
                             <div>
                                 <p>${item.name}</p>
-                                <small>ราคา: THB${item.price.toFixed(2)}</small>
+                                <small>ราคา: ${item.price.toFixed(2)}THB</small>
                             </div>
                         </div>
                     </td>
                     <td>
                         <input type="number" value="${item.quantity}" class="quantity" data-index="${index}" min="1" onchange="updateQuantity(${index}, this.value)">
                     </td>
-                    <td class="itemTotal">THB${itemTotal.toFixed(2)}</td>
+                    <td class="itemTotal">${itemTotal.toFixed(2)}THB</td>
                     <td><a href="#" onclick="removeItem(${index})">ลบ</a></td>
                 `;
                 cartTable.appendChild(row);
@@ -147,9 +147,9 @@
             const tax = total * 0.07; // อัตราภาษี 7%
             const grandTotal = total + tax;
 
-            totalPriceElement.innerText = `THB${total.toFixed(2)}`;
-            taxElement.innerText = `THB${tax.toFixed(2)}`;
-            grandTotalElement.innerText = `THB${grandTotal.toFixed(2)}`;
+            totalPriceElement.innerText = `${total.toFixed(2)}THB`;
+            taxElement.innerText = `${tax.toFixed(2)}THB`;
+            grandTotalElement.innerText = `${grandTotal.toFixed(2)}THB`;
         }
 
         // ฟังก์ชันสำหรับอัปเดตจำนวนสินค้าและราคาสินค้ารวม
